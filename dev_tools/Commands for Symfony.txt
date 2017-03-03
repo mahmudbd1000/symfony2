@@ -1,0 +1,66 @@
+Create a new Symfony application based on its latest stable version:
+ 
+	composer create-project symfony/framework-standard-edition my_project_name
+
+
+Create a Symfony application with composer for specific version:
+
+        composer create-project symfony/framework-standard-edition my_project_name "2.7.*"
+
+
+create Repositiry:
+
+	php symfony new "ProjectName"
+
+Create Entity:
+
+	php app/console generate:doctrine:entity   (for before 2.8)	
+
+	php bin/console generate:doctrine:entity
+
+	Entity Name (vip):    AppBundle:Product
+	
+Generate only setter getter:
+
+	php app/console generate:doctrine:entities AppBundle/Entity/Product (for before 2.8)
+
+	php bin/console generate:doctrine:entities AppBundle/Entity/Product
+
+Crearte CRUD for Entity:
+
+	php app/console generate:doctrine:crud  (for before 2.8)
+
+	php bin/console generate:doctrine:crud
+
+
+Check any update needed or not:
+
+	php app/console doctrine:schema:update --dump-sql
+
+Push the update of Schema into Database:
+
+	php app/console doctrine:schema:update --force
+
+
+For clear cash Memory:
+
+	php app/console cache:clear --env=prod
+
+
+php app/console doctrine:generate:entities AppBundle
+
+# Create bundle For our Application
+
+-> Vendor : Lynda, Category : Blank, NameSpace : Magazine
+-> So Bundle Name : LyndaMagazineBundle
+
+=> 	php app/console generate:bundle --namespace=Lynda/MagazineBundle (to generate bundle)
+=> 	php app/console generate:bundle --help (to know about the command details)
+
+
+Check available command line command
+
+	php app/console
+	
+To Run built in server in symfony
+    $ php app/console server:run
